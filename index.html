@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    
+    <div class="app">
+        <h4 class="text-center mb-3">Todo App</h4>
+        <div id="addnew" data-bs-toggle="modal" data-bs-target="#form">
+            <span>Add New Task</span>
+            <i class="bi bi-plus-lg"></i>
+        </div>
+        <h5 class="text-center my-3">Tasks</h5>
+
+    
+    <!-- Modal -->
+    <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Task</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Task Title</p>
+                <input class="form-control" type="text" name="" id="textinput">
+                <div id="msg"></div>
+                <br>
+                <p>Due Date</p>
+                <input class="form-control"  type="date" name="" id="dateinput">
+                <br>
+                <p>Description</p>
+                <textarea class="form-control"  name="" id="textarea" cols="30" rows="5"></textarea>
+                <br>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" id="add" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+        </div>
+    </form>
+
+
+
+        <div id="tasks">
+            <div>
+                <span class="fw-bold">Task 1</span>
+                <span class="small text-secondary">2022-1-20</span>
+                <p>Going To Gym To Workout</p>
+
+                <span class="options">
+                    <i onclick="editTask(this)" id="addnew" data-bs-toggle="modal" data-bs-target="#form"  class="bi bi-pencil-square"></i>
+                    <i onclick = "deleteTask(this)" class="bi bi-trash"></i>
+                </span>
+            </div>
+            <div>
+                <span class="fw-bold">Task 1</span>
+                <span class="small text-secondary">2022-1-20</span>
+                <p>Going To Gym To Workout</p>
+
+                <span class="options">
+                    <i onclick="editTask(this)" id="addnew" data-bs-toggle="modal" data-bs-target="#form" class="bi bi-pencil-square"></i>
+                    <i onclick = "deleteTask(this)" class="bi bi-trash"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>
